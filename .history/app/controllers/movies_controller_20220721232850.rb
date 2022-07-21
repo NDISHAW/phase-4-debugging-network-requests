@@ -10,13 +10,9 @@ class MoviesController < ApplicationController
     render json: movies
   end
 
-  def show
-    movies = Movie.find_by(id: params[:id])
-    render json: movies
-  end
   private
   def movie_params
-    params.permit(:title, :year, :length, :director, :description, :postre_url, :discount, :female_director)
+    params.permit(:title, :year, :length)
   end
 
 end

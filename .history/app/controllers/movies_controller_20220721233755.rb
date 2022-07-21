@@ -10,8 +10,8 @@ class MoviesController < ApplicationController
     render json: movies
   end
 
-  def show
-    movies = Movie.find_by(id: params[:id])
+  def index
+    movies = Movie.find(id: params)
     render json: movies
   end
   private
